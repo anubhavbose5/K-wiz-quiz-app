@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import QuestionCard from "./QuestionCard";
 import Controls from "./Controls";
-import { Question } from "@/types/QuestionType";
+import { KonnectionsPuzzle, Question } from "@/types/QuestionType";
 import Clues from "./Clues";
+import KonnectionsManager from "./KonectionsManager";
 
 export default function QuestionManager({
   questions,
@@ -13,6 +14,8 @@ export default function QuestionManager({
 }) {
   const [index, setIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
+  // Per-question "Start puzzle" flag used for konnections (resets when index changes)
+  const [puzzleStarted, setPuzzleStarted] = useState(false);
 
   const current = questions[index];
 
@@ -32,6 +35,11 @@ export default function QuestionManager({
 
   const toggleAnswer = () => setShowAnswer((s) => !s);
   const toggleQuestion = () => setShowAnswer(false);
+
+  useEffect(() => {
+    // Reset puzzle started state when question changes
+    setPuzzleStarted(false);
+  }, [index]);
 
   return (
     <div className="space-y-6 w-full max-w-3xl mx-auto">
@@ -55,6 +63,37 @@ export default function QuestionManager({
             </div>
           )}
         </div>
+      ) : current.type === "konnections" ? (
+        <>
+          {!puzzleStarted ? (
+            <div className="flex items-center justify-center gap-4">
+              <button
+                onClick={() => setPuzzleStarted(true)}
+                className="px-6 py-3 rounded-xl bg-primary text-black font-semibold ai-glow"
+              >
+                Start Puzzle
+              </button>
+              <button
+                onClick={() => {
+                  // optional skip behavior: goNext()
+                }}
+                className="px-4 py-3 rounded-xl bg-white/10"
+              >
+                Skip Puzzle
+              </button>
+            </div>
+          ) : null}
+
+          {/* Pass the embedded puzzle object directly. Do NOT auto-start inside KonnectionsManager. */}
+          <KonnectionsManager
+            key={current.id}
+            puzzle={current.konnectionsPuzzle}
+            // controlled start: pass started prop (parent decides)
+            started={puzzleStarted}
+            // showAnswer toggled from this manager's Show Answer button (passed below)
+            showAnswer={showAnswer}
+          />
+        </>
       ) : (
         <QuestionCard question={current} showAnswer={showAnswer} />
       )}
