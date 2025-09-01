@@ -51,6 +51,8 @@ export interface NormalQuestion {
   answerMediaType?: MediaType;
   timeLimit?: number;
   points?: number;
+  category?: string;
+  difficulty?: "EASY" | "MEDIUM" | "HARD";
 }
 
 /** Clue round pieces */
@@ -75,6 +77,8 @@ export interface ClueQuestion {
   answerMediaUrl?: string;
   answerMediaType?: MediaType;
   points?: number;
+  category?: string;
+  difficulty?: "EASY" | "MEDIUM" | "HARD";
 }
 
 /** K-onnections puzzle schema */
@@ -99,6 +103,8 @@ export interface KonnectionsQuestion {
   konnectionsPuzzle: KonnectionsPuzzle; // embedded puzzle data
   timeLimit?: number;
   points?: number;
+  category?: string;
+  difficulty?: "EASY" | "MEDIUM" | "HARD";
 }
 
 /** Union of all questions */

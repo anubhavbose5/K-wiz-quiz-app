@@ -41,6 +41,8 @@ export default function QuestionManager({
     setPuzzleStarted(false);
   }, [index]);
 
+  if (!current) return <div>No questions available.</div>;
+
   return (
     <div className="space-y-6 w-full max-w-3xl mx-auto">
       {/* Normal vs Clue rendering */}
