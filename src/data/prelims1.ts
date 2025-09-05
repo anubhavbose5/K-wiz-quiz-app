@@ -244,11 +244,10 @@ export const prelims1Round3: Question[] = [
         mediaUrl: "/CluesQ7C2.png",
         questionText: "",
       },
-      //TODO: Attach audio file
       {
         id: "c3",
         mediaType: "audio",
-        mediaUrl: "",
+        mediaUrl: "/CluesQ7C3.mp3",
         questionText: "",
       },
     ],
@@ -263,11 +262,10 @@ export const prelims1Round3: Question[] = [
     answerMediaType: "image",
     type: "clue",
     clues: [
-      //TODO: Attach audio file
       {
         id: "c1",
         mediaType: "audio",
-        mediaUrl: "",
+        mediaUrl: "/CluesQ8C1.mov",
         questionText: ``,
       },
       {
