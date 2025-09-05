@@ -6,8 +6,8 @@ import { Clue } from "@/types/QuestionType";
 
 export default function Clues({
   clues = [],
-  showAnswer,
-}: {
+}: // showAnswer,
+{
   clues: Clue[];
   showAnswer: boolean;
 }) {
@@ -25,7 +25,7 @@ export default function Clues({
   }, [clues]);
 
   return (
-    <div className="space-y-6 w-full max-w-3xl mx-auto">
+    <div className="space-y-6 w-full mx-auto">
       {/* Visible clues */}
       <div className="space-y-4">
         {clues.slice(0, visibleCount).map((clue) => (
@@ -34,7 +34,7 @@ export default function Clues({
             className="p-4 rounded-xl border border-white/10 bg-white/5 ai-glow"
           >
             {clue.questionText && (
-              <p className="text-lg font-medium mb-2">{clue.questionText}</p>
+              <p className="text-3xl font-medium mb-2">{clue.questionText}</p>
             )}
             <MediaRenderer type={clue.mediaType} url={clue.mediaUrl} />
           </div>

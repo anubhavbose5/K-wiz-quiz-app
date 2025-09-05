@@ -19,7 +19,7 @@ export default function QuestionCard({
   showAnswer: boolean;
 }) {
   return (
-    <div className="rounded-2xl border border-white/10 p-6 bg-white/5 ai-glow">
+    <div className="w-full rounded-2xl border border-white/10 p-6 bg-white/5 ai-glow">
       <QuestionRenderer data={question} showAnswer={showAnswer} />
     </div>
   );

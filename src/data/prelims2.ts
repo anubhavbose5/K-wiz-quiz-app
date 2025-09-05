@@ -1,5 +1,218 @@
 import { Question } from "@/types/QuestionType";
 
+export const prelims2Round3: Question[] = [
+  {
+    id: "q9",
+    questionText: "",
+    answer: "Subaltern",
+    mediaType: "image",
+    questionMediaUrl: "",
+    answerMediaUrl: "/CluesA9.jpg",
+    answerMediaType: "image",
+    type: "clue",
+    clues: [
+      {
+        id: "c1",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `Ranajit Guha is known as the pioneer of X studies. What is X?`,
+      },
+      {
+        id: "c2",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `Guha's seminal work, Elementary Aspects of Peasant Insurgency in Colonial India, is widely acclaimed as a classic in its field.`,
+      },
+      {
+        id: "c3",
+        mediaType: "image",
+        mediaUrl: "/CluesQ9C3.jpg",
+        questionText: "",
+      },
+    ],
+  },
+  {
+    id: "q10",
+    questionText: "",
+    answer: "Jamdani",
+    mediaType: "image",
+    questionMediaUrl: "",
+    answerMediaUrl: "/CluesA10.jpg",
+    answerMediaType: "image",
+    type: "clue",
+    clues: [
+      {
+        id: "c1",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `In 2013, the traditional art of weaving X was declared a UNESCO Intangible Cultural Heritage of Humanity. In 2016, Bangladesh received GI status for X.`,
+      },
+      {
+        id: "c2",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `X was originally known as Daccai. Under the Mughal Empire the Persian term X came to be in popular use.`,
+      },
+      {
+        id: "c3",
+        mediaType: "image",
+        mediaUrl: "/CluesQ10C3.jpg",
+        questionText: "",
+      },
+    ],
+  },
+  {
+    id: "q11",
+    questionText: "",
+    answer: "Paetongtarn Shinawatra",
+    mediaType: "image",
+    questionMediaUrl: "",
+    answerMediaUrl: "/CluesA11.png",
+    answerMediaType: "image",
+    type: "clue",
+    clues: [
+      {
+        id: "c1",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `On 1 July 2025, X was suspended from office by the Constitutional Court over a leaked phone call between her and former Cambodian leader Hun Sen. Name X?`,
+      },
+      {
+        id: "c2",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `In 2024 X became the youngest prime minister of Thailand`,
+      },
+      {
+        id: "c3",
+        mediaType: "image",
+        mediaUrl: "/CluesQ11C3.jpg",
+        questionText: "",
+      },
+    ],
+  },
+  {
+    id: "q12",
+    questionText: "",
+    answer: "Onitsuka Tiger",
+    mediaType: "image",
+    questionMediaUrl: "",
+    answerMediaUrl: "/CluesA12.png",
+    answerMediaType: "image",
+    type: "clue",
+    clues: [
+      {
+        id: "c1",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `Mexico 66 is a line of shoes released by X in 1966. The shoe was first developed to be used by athletes for the 1968 Summer Olympics.`,
+      },
+      {
+        id: "c2",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `In 1963, the first shipment of X shoes arrived in the US and Knight and Bowerman each invested US$500 to set up Blue Ribbon Sports to distribute the equipment. This company would later become Nike.`,
+      },
+      {
+        id: "c3",
+        mediaType: "image",
+        mediaUrl: "/CluesQ12C3.jpg",
+        questionText: "",
+      },
+    ],
+  },
+  {
+    id: "q13",
+    questionText: "",
+    answer: "Quantum Communication/ Quantum Key Distribution",
+    mediaType: "image",
+    questionMediaUrl: "",
+    answerMediaUrl: "/CluesA13.jpg",
+    answerMediaType: "image",
+    type: "clue",
+    clues: [
+      {
+        id: "c1",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `On June 16, the Ministry of Defence said in a statement that IIT-Delhi scientists together with the DRDO demonstrated X over a distance of more than 1 km in free space. What is X?`,
+      },
+      {
+        id: "c2",
+        mediaType: "image",
+        mediaUrl: "/CluesQ13C2.jpg",
+        questionText: "",
+      },
+      {
+        id: "c3",
+        mediaType: "image",
+        mediaUrl: "/CluesQ13C3.png",
+        questionText: "",
+      },
+    ],
+  },
+  {
+    id: "q14",
+    questionText: "",
+    answer: "Emily Davison",
+    mediaType: "image",
+    questionMediaUrl: "",
+    answerMediaUrl: "/CluesA14.jpg",
+    answerMediaType: "image",
+    type: "clue",
+    clues: [
+      {
+        id: "c1",
+        mediaType: "image",
+        mediaUrl: "/CluesQ14C1.png",
+        questionText: `Who collided with the horse?`,
+      },
+      {
+        id: "c2",
+        mediaType: "image",
+        mediaUrl: "/CluesQ14C2.jpg",
+        questionText: "",
+      },
+      {
+        id: "c3",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `X was an English suffragette who fought for votes for women in Britain in the early twentieth century. She died after being hit by King George V's horse Anmer at the 1913 Derby when she walked onto the track during the race.`,
+      },
+    ],
+  },
+  {
+    id: "q15",
+    questionText: "",
+    answer: "Fentanyl",
+    mediaType: "image",
+    questionMediaUrl: "",
+    answerMediaUrl: "/CluesA15.png",
+    answerMediaType: "image",
+    type: "clue",
+    clues: [
+      {
+        id: "c1",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `X is a highly potent synthetic piperidine opioid primarily used as an analgesic. It is 30 to 50 times more potent than heroin and 100 times more potent than morphine. What is X?`,
+      },
+      {
+        id: "c2",
+        mediaType: "image",
+        mediaUrl: "/CluesQ15C2.jpg",
+        questionText: "",
+      },
+      {
+        id: "c3",
+        mediaType: "image",
+        mediaUrl: "/CluesQ15C3.png",
+        questionText: "",
+      },
+    ],
+  },
+];
+
 export const konnectionsPuzzles: Question[] = [
   {
     id: "q-k-1",

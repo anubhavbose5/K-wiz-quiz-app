@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 import QuestionCard from "./QuestionCard";
 import Controls from "./Controls";
-import { KonnectionsPuzzle, Question } from "@/types/QuestionType";
+import { Question } from "@/types/QuestionType";
 import Clues from "./Clues";
 import KonnectionsManager from "./KonectionsManager";
+import Image from "next/image";
 
 export default function QuestionManager({
   questions,
@@ -44,7 +45,7 @@ export default function QuestionManager({
   if (!current) return <div>No questions available.</div>;
 
   return (
-    <div className="space-y-6 w-full max-w-3xl mx-auto">
+    <div className="space-y-6 w-full max-w-4xl mx-auto">
       {/* Normal vs Clue rendering */}
       {current.type === "clue" ? (
         <div className="space-y-4">
@@ -58,10 +59,21 @@ export default function QuestionManager({
 
           {/* Answer reveal (only when toggled) */}
           {showAnswer && (
-            <div className="mt-4 p-4 rounded-lg bg-green-500/10 border border-green-400/40 ai-glow">
-              <p className="text-lg font-semibold text-green-300">
-                Answer: {current.answer}
+            <div className="mt-4 p-4 rounded-lg bg-green-500/10 border border-green-400/40 ai-glow flex flex-col items-center justify-center text-center gap-2">
+              <p className="text-2xl font-semibold text-green-300">
+                {current?.answer}
               </p>
+              {current?.answerMediaUrl &&
+              current?.answerMediaType === "image" ? (
+                <Image
+                  src={current?.answerMediaUrl}
+                  alt={"Answer Media"}
+                  width={400}
+                  height={300}
+                  className="rounded-lg ai-glow object-contain"
+                  priority
+                />
+              ) : null}
             </div>
           )}
         </div>

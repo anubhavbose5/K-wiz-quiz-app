@@ -12,10 +12,10 @@ export default function QuestionRenderer({
 }) {
   console.log(data);
   return (
-    <div className="space-y-4">
+    <div className="w-full space-y-4">
       {/* Question */}
       {!showAnswer && (
-        <div>
+        <div className="w-full">
           <p className="text-xl font-semibold">{data?.questionText}</p>
           <MediaRenderer type={data.mediaType} url={data.questionMediaUrl} />
         </div>
