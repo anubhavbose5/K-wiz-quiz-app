@@ -6,9 +6,17 @@ type MediaRendererProps = {
   type?: "text" | "image" | "video" | "audio" | "youtube";
   url?: string;
   alt?: string;
+  width?: number;
+  height?: number;
 };
 
-export default function MediaRenderer({ type, url, alt }: MediaRendererProps) {
+export default function MediaRenderer({
+  type,
+  url,
+  alt,
+  width,
+  height,
+}: MediaRendererProps) {
   if (!type || !url || type === "text") return null;
 
   switch (type) {
@@ -18,8 +26,8 @@ export default function MediaRenderer({ type, url, alt }: MediaRendererProps) {
           <Image
             src={url}
             alt={alt || "question media"}
-            width={400}
-            height={300}
+            width={width || 800}
+            height={height || 600}
             className="rounded-lg ai-glow object-contain"
             priority
           />
