@@ -6,6 +6,7 @@ import Controls from "./Controls";
 import { Question } from "@/types/QuestionType";
 import Clues from "./Clues";
 import KonnectionsManager from "./KonectionsManager";
+import BonusQuestion from "./BonusQuestion";
 import Image from "next/image";
 
 export default function QuestionManager({
@@ -17,29 +18,46 @@ export default function QuestionManager({
   const [showAnswer, setShowAnswer] = useState(false);
   // Per-question "Start puzzle" flag used for konnections (resets when index changes)
   const [puzzleStarted, setPuzzleStarted] = useState(false);
+  const [showBonus, setShowBonus] = useState(false);
 
   const current = questions[index];
 
   const handleNext = () => {
     if (index < questions.length - 1) {
       setIndex(index + 1);
-      setShowAnswer(false);
+      // setShowAnswer(false);
     }
   };
 
   const handlePrev = () => {
     if (index > 0) {
       setIndex(index - 1);
-      setShowAnswer(false);
+      // setShowAnswer(false);
     }
   };
 
-  const toggleAnswer = () => setShowAnswer((s) => !s);
-  const toggleQuestion = () => setShowAnswer(false);
+  const toggleAnswer = () => {
+    setShowAnswer((s) => !s);
+    setShowBonus(false);
+  };
+  // const toggleAnswer = () =>
+  //   setShowAnswer((s) => {
+  //     const next = !s;
+  //     // hide bonus when showing the answer
+  //     if (next) setShowBonus(false);
+  //     return next;
+  //   });
+
+  const toggleQuestion = () => {
+    setShowAnswer(false);
+    setShowBonus(false);
+  };
 
   useEffect(() => {
     // Reset puzzle started state when question changes
     setPuzzleStarted(false);
+    setShowBonus(false);
+    setShowAnswer(false);
   }, [index]);
 
   if (!current) return <div>No questions available.</div>;
@@ -109,7 +127,17 @@ export default function QuestionManager({
           />
         </>
       ) : (
-        <QuestionCard question={current} showAnswer={showAnswer} />
+        <>
+          {!showBonus && (
+            <QuestionCard question={current} showAnswer={showAnswer} />
+          )}
+          {/* Bonus for normal questions */}
+          {current?.bonusQuestion && showBonus && (
+            <div className="mt-4">
+              <BonusQuestion bonus={current.bonusQuestion} />
+            </div>
+          )}
+        </>
       )}
 
       <Controls
@@ -120,6 +148,13 @@ export default function QuestionManager({
         showAnswer={showAnswer}
         disablePrev={index === 0}
         disableNext={index === questions.length - 1}
+        showBonus={showBonus}
+        onToggleBonus={
+          "bonusQuestion" in current && current.bonusQuestion
+            ? () => setShowBonus((b) => !b)
+            : undefined
+        }
+        // disableBonus={showAnswer}
       />
 
       <p className="text-center text-sm text-white/50">

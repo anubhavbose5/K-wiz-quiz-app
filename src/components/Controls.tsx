@@ -6,6 +6,9 @@ type ControlsProps = {
   showAnswer: boolean;
   disablePrev: boolean;
   disableNext: boolean;
+  showBonus?: boolean;
+  onToggleBonus?: () => void;
+  disableBonus?: boolean;
 };
 
 export default function Controls({
@@ -16,6 +19,9 @@ export default function Controls({
   showAnswer,
   disablePrev,
   disableNext,
+  showBonus,
+  onToggleBonus,
+  disableBonus,
 }: ControlsProps) {
   return (
     <div className="flex justify-between items-center mt-6">
@@ -40,6 +46,18 @@ export default function Controls({
         >
           {showAnswer ? "Hide Answer" : "Show Answer"}
         </button>
+        {/* for bonus questions */}
+        {onToggleBonus && (
+          <button
+            onClick={onToggleBonus}
+            disabled={disableBonus}
+            className={`px-4 py-2 rounded-xl btn ${
+              showBonus ? "bg-secondary text-black" : "bg-white/10 text-white"
+            }`}
+          >
+            {showBonus ? "Hide Bonus" : "Show Bonus"}
+          </button>
+        )}
       </div>
 
       <button

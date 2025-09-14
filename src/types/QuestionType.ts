@@ -1,44 +1,14 @@
-// export type Clue = {
-//   id: string;
-//   mediaType: "text" | "image" | "video" | "audio" | "youtube";
-//   mediaUrl?: string;
-//   questionText?: string;
-// };
-
-// export type Question = {
-//   answerMediaType?:
-//     | "text"
-//     | "image"
-//     | "video"
-//     | "audio"
-//     | "youtube"
-//     | undefined;
-//   questionText?: string;
-//   id: string;
-//   answer?: string;
-//   mediaType?: "text" | "image" | "video";
-//   mediaURL?: string;
-//   questionMediaUrl?: string;
-//   answerMediaUrl?: string;
-//   type?: "normal" | "clue" | "konnections";
-//   clues?: Clue[];
-// };
-
-// export type KonnectionsPuzzle = {
-//   id: string;
-//   words: string[]; // length 16
-//   groups: {
-//     id: string;
-//     words: string[]; // each length 4
-//     label?: string;
-//     description?: string;
-//   }[];
-// };
-
-// src/types/quiz.ts
 export type MediaType = "text" | "image" | "video" | "audio" | "youtube";
 
-/** Normal question */
+export interface BonusQuestion {
+  id: string;
+  questionText: string;
+  answer: string;
+  mediaType?: string;
+  questionMediaUrl: string;
+  answerMediaUrl: string;
+  answerMediaType: string;
+}
 export interface NormalQuestion {
   id: string;
   type?: "normal"; // optional so legacy items without type still work
@@ -53,6 +23,7 @@ export interface NormalQuestion {
   points?: number;
   category?: string;
   difficulty?: "EASY" | "MEDIUM" | "HARD";
+  bonusQuestion?: BonusQuestion;
 }
 
 /** Clue round pieces */
