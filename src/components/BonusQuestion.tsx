@@ -27,7 +27,7 @@ export default function BonusQuestion({
         <div className="text-4xl font-semibold">{bonus.questionText}</div>
       )}
 
-      {bonus.questionMediaUrl && !reveal && (
+      {bonus.mediaType === "image" && bonus.questionMediaUrl && !reveal && (
         <div className="flex justify-center">
           <Image
             src={bonus.questionMediaUrl}
@@ -37,6 +37,18 @@ export default function BonusQuestion({
             className="rounded-lg ai-glow object-contain"
             priority
           />
+        </div>
+      )}
+
+      {!reveal && bonus.mediaType === "audio" && bonus.questionMediaUrl && (
+        <div className="flex justify-center mt-4">
+          <audio
+            controls
+            src={bonus.questionMediaUrl}
+            className="w-full max-w-md"
+          >
+            Your browser does not support the audio element.
+          </audio>
         </div>
       )}
 
