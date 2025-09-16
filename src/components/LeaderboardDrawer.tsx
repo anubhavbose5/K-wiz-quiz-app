@@ -17,7 +17,7 @@ export default function LeaderboardDrawer({
       {/* You can keep this opener in header instead; included for convenience */}
       <button
         onClick={() => setOpen(true)}
-        className="fixed top-6 right-6 z-50 w-12 h-12 rounded-full bg-[#00e6ff4d] flex items-center justify-center shadow-lg hover:bg-accent/80 transition-colors"
+        className="fixed top-6 right-6 z-10 w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-teal-300 text-black font-semibold shadow-lg flex items-center justify-center"
         aria-label="Open Leaderboard"
       >
         <Trophy color="black" />

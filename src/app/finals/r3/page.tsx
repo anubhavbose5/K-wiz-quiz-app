@@ -1,16 +1,19 @@
 "use client";
-
 import RoundHeader from "@/components/RoundHeader";
-import QuestionManager from "@/components/QuestionManager";
-import { finalsQuestionsRound3 } from "@/data/finals";
+import SpinRound from "@/components/SpinRound";
+import { questionsFinalsR2 } from "@/data/finals"; // Ensure these have category & difficulty
 
-export default function Prelims1Round2Page() {
+export default function FinalsRound2Page() {
+  // Filter only konnection round or appropriate subset as needed
+  const finalsQuestions = questionsFinalsR2.filter(
+    (q) => q.category && q.difficulty
+  );
+
   return (
     <main className="min-h-screen flex flex-col">
-      <RoundHeader title="K-onnect The Dots" />
-
+      <RoundHeader title="Finals • Round 2 — Spin the Wheel" />
       <div className="flex-1 px-4 py-10">
-        <QuestionManager questions={finalsQuestionsRound3} />
+        <SpinRound questions={finalsQuestions} />
       </div>
     </main>
   );

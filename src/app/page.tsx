@@ -1,4 +1,5 @@
 import LeaderboardDrawer from "@/components/LeaderboardDrawer";
+import TeamMembersDrawer from "@/components/TeamMembersDrawer";
 import Link from "next/link";
 
 const Section = ({
@@ -30,7 +31,10 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12 space-y-12">
       <header className="text-center space-y-2">
-        <LeaderboardDrawer />
+        <div>
+          <TeamMembersDrawer showOpener={true} />
+          <LeaderboardDrawer />
+        </div>
         <h1 className="text-6xl md:text-7xl font-futuristic text-primary drop-shadow-[0_0_20px_rgba(0,230,255,0.35)]">
           K-WIZ 2025
         </h1>
@@ -48,22 +52,21 @@ export default function Home() {
           ]}
         />
         <Section
-          title="Prelims 2"
-          titleClass="text-secondary"
-          rounds={[
-            { href: "/prelims2/r1", label: "Round 1" },
-            { href: "/prelims2/r2", label: "Round 2" },
-            { href: "/prelims2/r3", label: "Round 3" },
-          ]}
-        />
-        <Section
           title="Finals"
-          titleClass="text-primary"
+          titleClass="text-secondary"
           rounds={[
             { href: "/finals/r1", label: "Round 1" },
             { href: "/finals/r2", label: "Round 2" },
             { href: "/finals/r3", label: "Round 3" },
-            { href: "/finals/r4", label: "Round 4" },
+          ]}
+        />
+        <Section
+          title="Prelims 2"
+          titleClass="text-primary"
+          rounds={[
+            { href: "/prelims2/r1", label: "Round 1" },
+            { href: "/prelims2/r2", label: "Round 2" },
+            { href: "/prelims2/r3", label: "Round 3" },
           ]}
         />
       </div>
