@@ -76,6 +76,12 @@ export interface KonnectionsQuestion {
   points?: number;
   category?: string;
   difficulty?: "EASY" | "MEDIUM" | "HARD";
+  questionText?: string; // optional prompt
+  answer?: string; // optional summary answer
+  mediaType?: MediaType;
+  questionMediaUrl?: string;
+  answerMediaUrl?: string;
+  answerMediaType?: MediaType;
 }
 
 /** Union of all questions */
