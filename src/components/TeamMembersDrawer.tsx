@@ -11,13 +11,13 @@ type Member = {
 };
 
 const DEFAULT_MEMBERS: Member[] = [
-  { id: "m1", name: "Anubhav Bose", img: "/team/anubhav.jpg" },
-  { id: "m2", name: "Sana Mehta", img: "/team/sana.jpg" },
-  { id: "m3", name: "Rahil Kumar", img: "/team/rahil.jpg" },
-  { id: "m4", name: "Priya Nair", img: "/team/priya.jpg" },
-  { id: "m5", name: "Karan Singh", img: "/team/karan.jpg" },
-  { id: "m6", name: "Lina Das", img: "/team/lina.jpg" },
-  { id: "m7", name: "Omar Patel", img: "/team/omar.jpg" },
+  { id: "m1", name: "Anubhav Bose", img: "/Photo_Anubhav.jpg" },
+  // { id: "m2", name: "Sana Mehta", img: "/team/sana.jpg" },
+  // { id: "m3", name: "Rahil Kumar", img: "/team/rahil.jpg" },
+  // { id: "m4", name: "Priya Nair", img: "/team/priya.jpg" },
+  // { id: "m5", name: "Karan Singh", img: "/team/karan.jpg" },
+  // { id: "m6", name: "Lina Das", img: "/team/lina.jpg" },
+  // { id: "m7", name: "Omar Patel", img: "/team/omar.jpg" },
 ];
 
 export default function TeamMembersDrawer({
