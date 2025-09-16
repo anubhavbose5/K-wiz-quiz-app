@@ -1,6 +1,10 @@
 "use client";
+export const dynamic = "force-dynamic";
 import RoundHeader from "@/components/RoundHeader";
-import SpinRound from "@/components/SpinRound";
+import nextDynamic from "next/dynamic";
+const SpinRound = nextDynamic(() => import("@/components/SpinRound"), {
+  ssr: false,
+});
 import { questionsFinalsR2 } from "@/data/finals"; // Ensure these have category & difficulty
 
 export default function FinalsRound2Page() {

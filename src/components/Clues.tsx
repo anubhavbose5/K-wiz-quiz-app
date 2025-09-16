@@ -12,7 +12,6 @@ export default function Clues({
   showAnswer: boolean;
 }) {
   const [visibleCount, setVisibleCount] = useState(0);
-  console.log("CLUES", clues);
 
   const showNextClue = () => {
     if (visibleCount < clues.length) {

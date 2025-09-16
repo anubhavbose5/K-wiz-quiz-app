@@ -1,3 +1,4 @@
+"use client";
 import LeaderboardDrawer from "@/components/LeaderboardDrawer";
 import TeamMembersDrawer from "@/components/TeamMembersDrawer";
 import Link from "next/link";

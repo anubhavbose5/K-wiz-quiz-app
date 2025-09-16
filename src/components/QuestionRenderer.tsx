@@ -10,7 +10,6 @@ export default function QuestionRenderer({
   data: Question;
   showAnswer: boolean;
 }) {
-  console.log(data);
   return (
     <div className="w-full space-y-4">
       {/* Question */}

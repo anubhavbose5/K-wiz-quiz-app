@@ -31,6 +31,7 @@ export default function TeamMembersDrawer({
   const drawerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") setOpen(false);
     }
@@ -102,16 +103,12 @@ export default function TeamMembersDrawer({
                   >
                     <div className="w-40 h-40 rounded-full overflow-hidden shadow-xl relative">
                       <Image
-                        src={m.img || getFallback(m.name)}
+                        src={m.img ?? getFallback(m.name)}
                         alt={m.name}
                         fill
                         sizes="160px"
                         className="object-cover"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).src = getFallback(
-                            m.name
-                          );
-                        }}
+                        // removed onError - src fallback should handle missing images.
                       />
                     </div>
                     <div className="mt-4 text-xl font-semibold">{m.name}</div>
