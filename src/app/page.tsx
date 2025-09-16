@@ -1,3 +1,4 @@
+import LeaderboardDrawer from "@/components/LeaderboardDrawer";
 import Link from "next/link";
 
 const Section = ({
@@ -29,6 +30,7 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12 space-y-12">
       <header className="text-center space-y-2">
+        <LeaderboardDrawer />
         <h1 className="text-6xl md:text-7xl font-futuristic text-primary drop-shadow-[0_0_20px_rgba(0,230,255,0.35)]">
           K-WIZ 2025
         </h1>
