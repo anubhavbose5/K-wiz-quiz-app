@@ -12,6 +12,7 @@ module.exports = {
         primary: "#00E6FF", // Neon Blue
         secondary: "#7C3AED", // Purple Glow
         accent: "#39FF14", // Cyber Green
+        black: "#000000",
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui"],

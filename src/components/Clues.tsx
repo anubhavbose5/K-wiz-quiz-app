@@ -27,11 +27,14 @@ export default function Clues({
     <div className="space-y-6 w-full mx-auto">
       {/* Visible clues */}
       <div className="space-y-4">
-        {clues.slice(0, visibleCount).map((clue) => (
+        {clues.slice(0, visibleCount).map((clue, index) => (
           <div
             key={clue.id}
             className="p-4 rounded-xl border border-white/10 bg-white/5 ai-glow"
           >
+            <p className="text-3xl font-medium mb-2 text-lime-400">{`Clue ${
+              index + 1
+            }`}</p>
             {clue.questionText && (
               <p className="text-3xl font-medium mb-2">{clue.questionText}</p>
             )}

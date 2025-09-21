@@ -39,7 +39,6 @@ export default function Home() {
         <h1 className="text-6xl md:text-7xl font-futuristic text-primary drop-shadow-[0_0_20px_rgba(0,230,255,0.35)]">
           K-WIZ 2025
         </h1>
-        <p className="text-lg text-secondary">AI-themed Quiz Experience</p>
       </header>
 
       <div className="grid gap-8 md:grid-cols-3 w-full max-w-6xl">

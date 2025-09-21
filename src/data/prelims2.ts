@@ -279,7 +279,7 @@ export const konnectionsPuzzles: Question[] = [
         "The Flu Game",
         "Green Gold Animation",
         "Rumble in the Jungle",
-        "Hanging Gardens",
+        "Lighthouse of Alexandria",
         "Shakespeare in Love",
         "Gigi",
         "Colossus of Rhodes",
@@ -317,7 +317,7 @@ export const konnectionsPuzzles: Question[] = [
           words: [
             "Zeus",
             "Artemis temple",
-            "Hanging Gardens",
+            "Lighthouse of Alexandria",
             "Colossus of Rhodes",
           ],
           label: "Former world wonders",
@@ -462,7 +462,7 @@ export const konnectionsPuzzles: Question[] = [
         "Baritsu",
         "Gasogene",
         "Balut",
-        "Dada",
+        "Sunrise",
         "Yada Yada",
       ],
       groups: [
@@ -473,7 +473,7 @@ export const konnectionsPuzzles: Question[] = [
         },
         {
           id: "g2",
-          words: ["Scream", "Impression", "Guernica", "Dada"],
+          words: ["Scream", "Impression", "Guernica", "Sunrise"],
           label: "Paintings that created a storm",
         },
         {
