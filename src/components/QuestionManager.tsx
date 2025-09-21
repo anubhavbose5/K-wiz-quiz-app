@@ -68,11 +68,16 @@ export default function QuestionManager({
       {current.type === "clue" ? (
         <div className="space-y-4">
           {!showAnswer && (
-            <Clues
-              key={current.id}
-              clues={current.clues || []}
-              showAnswer={showAnswer}
-            />
+            <>
+              <p className="text-xl font-semibold">
+                {current?.questionText ?? ""}
+              </p>
+              <Clues
+                key={current.id}
+                clues={current.clues || []}
+                showAnswer={showAnswer}
+              />
+            </>
           )}
 
           {/* Answer reveal (only when toggled) */}

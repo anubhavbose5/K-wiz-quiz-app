@@ -163,8 +163,8 @@ export const prelims2Round3: Question[] = [
     clues: [
       {
         id: "c1",
-        mediaType: "image",
-        mediaUrl: "/CluesQ14C1.png",
+        mediaType: "video",
+        mediaUrl: "/CluesQ14C1.mp4",
         questionText: `Who collided with the horse?`,
       },
       {

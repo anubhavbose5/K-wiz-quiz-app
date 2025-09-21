@@ -179,8 +179,8 @@ export const prelims1Round3: Question[] = [
       },
       {
         id: "c2",
-        mediaType: "image",
-        mediaUrl: "/CluesQ5C2.png",
+        mediaType: "video",
+        mediaUrl: "/CluesQ5C2.mp4",
         questionText: "",
       },
       {

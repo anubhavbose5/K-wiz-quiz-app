@@ -26,8 +26,8 @@ export default function MediaRenderer({
           <Image
             src={url}
             alt={alt || "question media"}
-            width={width || 800}
-            height={height || 600}
+            width={width || 500}
+            height={height || 400}
             className="rounded-lg ai-glow object-contain"
             priority
           />

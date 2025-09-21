@@ -20,7 +20,7 @@ export default function KonnectionsGrid({
   disabled = false,
 }: Props) {
   return (
-    <div className="w-full max-w-2xl">
+    <div className="w-full max-w-5xl">
       <div className="grid grid-cols-4 gap-4">
         {words.map((word, i) => {
           const isSelected = selectedIndices.has(i);
