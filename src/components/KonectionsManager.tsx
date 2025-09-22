@@ -56,6 +56,9 @@ export default function KonnectionsManager({
   const [foundGroupIds, setFoundGroupIds] = useState<Set<string>>(new Set());
   const [message, setMessage] = useState<string>("");
 
+  const correctSound = useMemo(() => new Audio("/CorrectAnswer.mp3"), []);
+const wrongSound = useMemo(() => new Audio("/WrongAnswer.mp3"), []);
+
   // Reset internal state whenever puzzle changes (new question)
   useEffect(() => {
     setInternalStarted(!!started); // reflect controlled start if provided
@@ -178,6 +181,7 @@ export default function KonnectionsManager({
 
     const matched = findMatchedGroup();
     if (matched) {
+      correctSound.play().catch(() => {});
       setFoundGroupIds((prev) => {
         const copy = new Set(prev);
         copy.add(matched.id);
@@ -191,6 +195,7 @@ export default function KonnectionsManager({
         onAllGroupsFound?.();
       }
     } else {
+      wrongSound.play().catch(() => {});
       const remaining = triesLeft - 1;
       setTriesLeft(remaining);
       setSelectedIndices(new Set());
