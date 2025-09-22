@@ -3,6 +3,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import KonnectionsGrid from "./KonectionsGrid";
 import { cn } from "@/lib/utils";
+import { ResultModal } from "./ResultModal";
 
 /**
  * Types
@@ -56,8 +57,12 @@ export default function KonnectionsManager({
   const [foundGroupIds, setFoundGroupIds] = useState<Set<string>>(new Set());
   const [message, setMessage] = useState<string>("");
 
+  // popup state
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalType, setModalType] = useState<"correct" | "wrong" | null>(null);
+
   const correctSound = useMemo(() => new Audio("/CorrectAnswer.mp3"), []);
-const wrongSound = useMemo(() => new Audio("/WrongAnswer.mp3"), []);
+  const wrongSound = useMemo(() => new Audio("/WrongAnswer.mp3"), []);
 
   // Reset internal state whenever puzzle changes (new question)
   useEffect(() => {
@@ -182,6 +187,9 @@ const wrongSound = useMemo(() => new Audio("/WrongAnswer.mp3"), []);
     const matched = findMatchedGroup();
     if (matched) {
       correctSound.play().catch(() => {});
+      setModalType("correct");
+      setModalOpen(true);
+
       setFoundGroupIds((prev) => {
         const copy = new Set(prev);
         copy.add(matched.id);
@@ -196,6 +204,9 @@ const wrongSound = useMemo(() => new Audio("/WrongAnswer.mp3"), []);
       }
     } else {
       wrongSound.play().catch(() => {});
+      setModalType("wrong");
+      setModalOpen(true);
+
       const remaining = triesLeft - 1;
       setTriesLeft(remaining);
       setSelectedIndices(new Set());
@@ -211,18 +222,18 @@ const wrongSound = useMemo(() => new Audio("/WrongAnswer.mp3"), []);
   };
 
   // helper: map group -> indices (useful for showing group words or debug UI)
-  const groupIndicesMap = useMemo(() => {
-    const map = new Map<string, number[]>();
-    for (const g of puzzle.groups) {
-      const idxs: number[] = [];
-      for (const w of g.words) {
-        const list = wordIndexMap.get(w) ?? [];
-        list.forEach((i) => idxs.push(i));
-      }
-      map.set(g.id, idxs);
-    }
-    return map;
-  }, [puzzle.groups, wordIndexMap]);
+  // const groupIndicesMap = useMemo(() => {
+  //   const map = new Map<string, number[]>();
+  //   for (const g of puzzle.groups) {
+  //     const idxs: number[] = [];
+  //     for (const w of g.words) {
+  //       const list = wordIndexMap.get(w) ?? [];
+  //       list.forEach((i) => idxs.push(i));
+  //     }
+  //     map.set(g.id, idxs);
+  //   }
+  //   return map;
+  // }, [puzzle.groups, wordIndexMap]);
 
   // ---- RENDER ----
   // If not started: show internal start controls if uncontrolled,
@@ -365,6 +376,11 @@ const wrongSound = useMemo(() => new Audio("/WrongAnswer.mp3"), []);
           );
         })}
       </div>
+      <ResultModal
+        open={modalOpen}
+        type={modalType}
+        onClose={() => setModalOpen(false)}
+      />
     </div>
   );
 }
