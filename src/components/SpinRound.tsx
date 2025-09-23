@@ -51,40 +51,47 @@ export default function SpinRound({ questions }: Props) {
     </>
   ) : (
     <div className="space-y-6 flex flex-col items-center justify-center min-h-[60vh]">
-      <Wheel
-        mustStartSpinning={mustSpin}
-        prizeNumber={prizeIndex}
-        data={data}
-        backgroundColors={["#FF77A9", "#FFDD47", "#47FFD7", "#47B0FF"]}
-        textColors={["#000"]}
-        onStopSpinning={() => {
-          setMustSpin(false);
-          setSelectedCategory(categories[prizeIndex] ?? null);
-        }}
-      />
-
-      {selectedCategory && (
-        <div className="space-y-2">
-          <div>
-            Selected category: <strong>{selectedCategory}</strong>
-          </div>
-          <div className="flex gap-2">
-            {(["EASY", "MEDIUM", "HARD"] as const).map((level) => (
-              <button
-                key={level}
-                onClick={() => setSelectedDifficulty(level)}
-                className={`px-4 py-2 rounded-lg ${
-                  selectedDifficulty === level
-                    ? "bg-secondary text-black"
-                    : "bg-white/20 text-white"
-                }`}
-              >
-                {level}
-              </button>
-            ))}
-          </div>
+      <div className="w-full flex flex-row gap-10 justify-center items-center">
+        <div className="flex items-center justify-center w-[500px] h-[500px] scale-110">
+          <Wheel
+            mustStartSpinning={mustSpin}
+            prizeNumber={prizeIndex}
+            data={data}
+            backgroundColors={["#FF77A9", "#FFDD47", "#47FFD7", "#47B0FF"]}
+            textColors={["#000"]}
+            onStopSpinning={() => {
+              setMustSpin(false);
+              setSelectedCategory(categories[prizeIndex] ?? null);
+            }}
+            fontSize={16}
+          />
         </div>
-      )}
+
+        {selectedCategory ? (
+          <div className="space-y-2">
+            <div className="text-6xl">
+              <strong className="text-lime-400">{selectedCategory}</strong>
+            </div>
+            <div className="flex gap-2">
+              {(["EASY", "MEDIUM", "HARD"] as const).map((level) => (
+                <button
+                  key={level}
+                  onClick={() => setSelectedDifficulty(level)}
+                  className={`px-4 py-2 rounded-lg ${
+                    selectedDifficulty === level
+                      ? "bg-secondary text-black"
+                      : "bg-white/20 text-white"
+                  }`}
+                >
+                  {level}
+                </button>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className="w-[395px]"></div>
+        )}
+      </div>
 
       <div className="flex gap-3">
         <button

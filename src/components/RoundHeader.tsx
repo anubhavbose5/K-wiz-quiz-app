@@ -22,7 +22,7 @@ export default function RoundHeader({
       </Link>
 
       {/* Center: Title */}
-      <h2 className="text-xl md:text-2xl font-futuristic text-primary text-center flex-1">
+      <h2 className="text-4xl md:text-3xl font-futuristic text-primary text-center flex-1">
         {title}
       </h2>
 
