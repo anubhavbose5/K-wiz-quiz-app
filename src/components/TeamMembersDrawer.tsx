@@ -14,7 +14,7 @@ const DEFAULT_MEMBERS: Member[] = [
   { id: "m4", name: "Arijit Ghosh", img: "/Photo_Arijit.jpeg" },
   { id: "m1", name: "Juniya Tewari", img: "/Photo_Juniya.jpg" },
   { id: "m6", name: "Ankush Das", img: "/Photo_Ankush.jpg" },
-  { id: "m7", name: "Shreya", img: "/Photo_Shreya.jpeg" },
+  { id: "m7", name: "Shreya Dey", img: "/Photo_Shreya.jpeg" },
   { id: "m5", name: "Swarnil Dey", img: "/Photo_Swarnil.jpeg" },
   { id: "m3", name: "Sohini Chakraborty", img: "/Photo_Sohini.jpeg" },
   { id: "m2", name: "Anubhav Bose", img: "/Photo_Anubhav2.jpg" },
