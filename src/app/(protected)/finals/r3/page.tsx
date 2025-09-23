@@ -15,7 +15,7 @@ export default function FinalsRound2Page() {
 
   return (
     <main className="min-h-screen flex flex-col">
-      <RoundHeader title="Finals • Round 2 — Spin the Wheel" />
+      <RoundHeader title="Quiz-aster or master" />
       <div className="flex-1 px-4 py-10">
         <SpinRound questions={finalsQuestions} />
       </div>

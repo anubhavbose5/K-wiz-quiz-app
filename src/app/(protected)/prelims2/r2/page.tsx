@@ -8,7 +8,7 @@ export default function Prelims1Round2Page() {
   return (
     <main className="min-h-screen flex flex-col">
       {/* Header with round title + home button */}
-      <RoundHeader title="Prelims 2 • Round 2 — K-onnections" />
+      <RoundHeader title="Konnections" />
 
       <div className="flex-1 px-4 py-10">
         {/* Pass in the array of questions */}

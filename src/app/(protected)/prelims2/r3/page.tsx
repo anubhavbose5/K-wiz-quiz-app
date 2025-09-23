@@ -7,7 +7,7 @@ import { prelims2Round3 } from "@/data/prelims2";
 export default function Prelims1Round3Page() {
   return (
     <main className="min-h-screen flex flex-col">
-      <RoundHeader title="Prelims 1 • Round 3 (Clue Round)" />
+      <RoundHeader title="Blues Clues" />
       <div className="flex-1 flex items-center justify-center px-4 py-10">
         <QuestionManager questions={prelims2Round3} />
       </div>
