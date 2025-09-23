@@ -36,7 +36,7 @@ export default function MusicDrawer({
       {showOpener && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed top-6 right-40 z-20 w-12 h-12 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 text-black shadow-lg flex items-center justify-center"
+          className="fixed top-6 right-60 z-20 w-12 h-12 rounded-full bg-gradient-to-br from-pink-400 to-purple-400 text-black shadow-lg flex items-center justify-center"
         >
           <Music />
         </button>
@@ -54,7 +54,7 @@ export default function MusicDrawer({
         aria-modal="true"
         tabIndex={-1}
         ref={drawerRef}
-        className="fixed inset-0 z-50 pointer-events-none"
+        className="fixed inset-0 z-[100] pointer-events-none"
       >
         <div
           className={`z-50 absolute inset-0 transform transition-transform duration-300 ${
