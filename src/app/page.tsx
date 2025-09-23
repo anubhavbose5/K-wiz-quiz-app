@@ -1,5 +1,6 @@
 "use client";
 import LeaderboardDrawer from "@/components/LeaderboardDrawer";
+import MusicDrawer from "@/components/MusicDrawer";
 import TeamMembersDrawer from "@/components/TeamMembersDrawer";
 import Link from "next/link";
 
@@ -33,6 +34,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col items-center justify-center px-4 py-12 space-y-12">
       <header className="text-center space-y-2">
         <div>
+          <MusicDrawer showOpener />
           <TeamMembersDrawer showOpener={true} />
           <LeaderboardDrawer />
         </div>

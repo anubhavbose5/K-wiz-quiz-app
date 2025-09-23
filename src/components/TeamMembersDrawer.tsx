@@ -56,7 +56,7 @@ export default function TeamMembersDrawer({
       {showOpener && (
         <button
           onClick={() => setOpen(true)}
-          className="fixed top-6 right-24 z-50 px-4 py-4 w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-teal-300 text-black font-semibold shadow-lg flex items-center justify-center"
+          className="fixed top-6 right-24 -z-30 px-4 py-4 w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-teal-300 text-black font-semibold shadow-lg flex items-center justify-center"
         >
           <Users />
         </button>
