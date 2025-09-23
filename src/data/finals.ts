@@ -494,6 +494,16 @@ export const questionsFinalsR2: Question[] = [
 
 export const finalsQuestionsRound3: Question[] = [
   {
+    id: "q0",
+    questionText:
+      "Two questions per team, 20 points for correct, -10 for wrong. Time- 30 sec",
+    answer: "",
+    mediaType: "text",
+    questionMediaUrl: "",
+    answerMediaUrl: "",
+    answerMediaType: "text",
+  },
+  {
     isAudience: true,
     id: "q1",
     questionText: "",
@@ -634,6 +644,16 @@ export const finalsQuestionsRound3: Question[] = [
 ];
 
 export const finalsQuestionsRound1: Question[] = [
+  {
+    id: "q0",
+    questionText:
+      "This is buzzer round; 15 points for zoomin and 15 points buzzin question; 15 points negative marking for wrong answer only for zoomin question.",
+    answer: "",
+    mediaType: "text",
+    questionMediaUrl: "",
+    answerMediaUrl: "",
+    answerMediaType: "text",
+  },
   {
     isAudience: true,
     id: "q2",

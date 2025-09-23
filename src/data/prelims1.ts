@@ -41,6 +41,18 @@ export const prelims1Round1: Question[] = [
 
 export const prelims1Round3: Question[] = [
   {
+    id: "q0",
+    questionText:
+      "30 points if you get it in first clue, 20 points for second clue, 10 points for third clue",
+    answer: "",
+    mediaType: "text",
+    questionMediaUrl: "",
+    answerMediaUrl: "",
+    answerMediaType: "text",
+    type: "clue",
+    clues: [],
+  },
+  {
     isAudience: true,
     id: "q8",
     questionText: "Name this bird",
