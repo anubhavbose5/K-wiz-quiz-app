@@ -10,6 +10,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Cricket Mania",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC1A1.jpg",
   },
   {
     id: "c1-q2",
@@ -19,9 +21,10 @@ export const questionsFinalsR2: Question[] = [
     answer: "183 by India, 1983 vs West Indies (140 all out)",
     mediaType: "image",
     questionMediaUrl: "",
-    answerMediaUrl: "",
     category: "Cricket Mania",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC1A2.jpg",
   },
 
   {
@@ -33,6 +36,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Cricket Mania",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC1A3.webp",
   },
   {
     id: "c2-q1",
@@ -43,6 +48,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Football Fever",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC2A1.jpg",
   },
   {
     id: "c2-q2",
@@ -53,6 +60,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Football Fever",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC2A2.jpg",
   },
   {
     id: "c2-q3",
@@ -63,6 +72,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Football Fever",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC2A3.jpg",
   },
   {
     id: "c3-q1",
@@ -146,6 +157,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Lonely Planet",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC5A1.webp",
   },
   {
     id: "c5-q2",
@@ -156,6 +169,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Lonely Planet",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC5A2.jpeg",
   },
   {
     id: "c5-q3",
@@ -166,6 +181,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Lonely Planet",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC5A3.webp",
   },
   {
     id: "c6-q1",
@@ -176,6 +193,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Law of the Land",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC6A1.png",
   },
   {
     id: "c6-q2",
@@ -186,6 +205,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Law of the Land",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC6A2.webp",
   },
   {
     id: "c6-q3",
@@ -197,6 +218,8 @@ export const questionsFinalsR2: Question[] = [
     questionMediaUrl: "/SpinC6Q3.png",
     category: "Law of the Land",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC6A3.webp",
   },
   {
     id: "c7-q1",
@@ -242,6 +265,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Money Money",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC8A1.png",
   },
   {
     id: "c8-q2",
@@ -252,6 +277,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Money Money",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC8A2.jpg",
   },
   {
     id: "c8-q3",
@@ -262,6 +289,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Money Money",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC8A3.gif",
   },
   {
     id: "c9-q1",
@@ -343,6 +372,8 @@ export const questionsFinalsR2: Question[] = [
     questionMediaUrl: "/SpinC11Q1.png",
     category: "Into the Wild",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC11A1.webp",
   },
   {
     id: "c11-q2",
@@ -353,6 +384,8 @@ export const questionsFinalsR2: Question[] = [
     questionMediaUrl: "/SpinC11Q2.png",
     category: "Into the Wild",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC11A2.jpg",
   },
   {
     id: "c11-q3",
@@ -363,6 +396,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Into the Wild",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC11A3.avif",
   },
   {
     id: "c12-q1",
@@ -373,6 +408,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Voices of Freedom",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC12A1.jpg",
   },
   {
     id: "c12-q2",
@@ -384,6 +421,8 @@ export const questionsFinalsR2: Question[] = [
     questionMediaUrl: "/SpinC12Q2.png",
     category: "Voices of Freedom",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC12A2.avif",
   },
   {
     id: "c12-q3",
@@ -394,6 +433,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Voices of Freedom",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC12A3.jpg",
   },
   {
     id: "c13-q1",
@@ -403,6 +444,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Eureka",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC13A1.jpg",
   },
   {
     id: "c13-q2",
@@ -423,6 +466,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Eureka",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC13A3.webp",
   },
   {
     id: "c14-q1",
@@ -433,6 +478,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Blockbuster Buzz",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC14A1.jpeg",
   },
   {
     id: "c14-q2",
@@ -455,6 +502,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Blockbuster Buzz",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC14A3.jpg",
   },
   {
     id: "c15-q1",
@@ -500,6 +549,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Math-e-magic",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC16A1.png",
   },
   {
     id: "c16-q2",
@@ -511,6 +562,8 @@ export const questionsFinalsR2: Question[] = [
     questionMediaUrl: "/SpinC16Q2.png",
     category: "Math-e-magic",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC16A2.webp",
   },
   {
     id: "c16-q3",
@@ -523,6 +576,8 @@ export const questionsFinalsR2: Question[] = [
     questionMediaUrl: "",
     category: "Math-e-magic",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC16A3.jpg",
   },
 ];
 
