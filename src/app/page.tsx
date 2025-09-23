@@ -58,6 +58,7 @@ export default function Home() {
             { href: "/finals/r1", label: "Round 1" },
             { href: "/finals/r2", label: "Round 2" },
             { href: "/finals/r3", label: "Round 3" },
+            { href: "/tie-breaker", label: "Tie Breaker" },
           ]}
         />
         <Section

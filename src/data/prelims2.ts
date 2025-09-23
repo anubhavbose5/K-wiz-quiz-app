@@ -2,6 +2,37 @@ import { Question } from "@/types/QuestionType";
 
 export const prelims2Round3: Question[] = [
   {
+    isAudience: true,
+    id: "q12",
+    questionText: "",
+    answer: "Onitsuka Tiger",
+    mediaType: "image",
+    questionMediaUrl: "",
+    answerMediaUrl: "/CluesA12.png",
+    answerMediaType: "image",
+    type: "clue",
+    clues: [
+      {
+        id: "c1",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `Mexico 66 is a line of shoes released by X in 1966. The shoe was first developed to be used by athletes for the 1968 Summer Olympics. What is X?`,
+      },
+      {
+        id: "c2",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `In 1963, the first shipment of X shoes arrived in the US and Knight and Bowerman each invested US$500 to set up Blue Ribbon Sports to distribute the equipment. This company would later become Nike.`,
+      },
+      {
+        id: "c3",
+        mediaType: "image",
+        mediaUrl: "/CluesQ12C3.jpg",
+        questionText: "",
+      },
+    ],
+  },
+  {
     id: "q9",
     questionText: "",
     answer: "Subaltern",
@@ -87,36 +118,6 @@ export const prelims2Round3: Question[] = [
         id: "c3",
         mediaType: "image",
         mediaUrl: "/CluesQ11C3.jpg",
-        questionText: "",
-      },
-    ],
-  },
-  {
-    id: "q12",
-    questionText: "",
-    answer: "Onitsuka Tiger",
-    mediaType: "image",
-    questionMediaUrl: "",
-    answerMediaUrl: "/CluesA12.png",
-    answerMediaType: "image",
-    type: "clue",
-    clues: [
-      {
-        id: "c1",
-        mediaType: "text",
-        mediaUrl: "",
-        questionText: `Mexico 66 is a line of shoes released by X in 1966. The shoe was first developed to be used by athletes for the 1968 Summer Olympics.`,
-      },
-      {
-        id: "c2",
-        mediaType: "text",
-        mediaUrl: "",
-        questionText: `In 1963, the first shipment of X shoes arrived in the US and Knight and Bowerman each invested US$500 to set up Blue Ribbon Sports to distribute the equipment. This company would later become Nike.`,
-      },
-      {
-        id: "c3",
-        mediaType: "image",
-        mediaUrl: "/CluesQ12C3.jpg",
         questionText: "",
       },
     ],
@@ -452,7 +453,7 @@ export const konnectionsPuzzles: Question[] = [
         "Scream",
         "Umami",
         "Festivus",
-        "Impression",
+        "Impression, Sunrise",
         "Double-dip",
         "Elementary",
         "Truffle",
@@ -462,7 +463,7 @@ export const konnectionsPuzzles: Question[] = [
         "Baritsu",
         "Gasogene",
         "Balut",
-        "Sunrise",
+        "Olympia",
         "Yada Yada",
       ],
       groups: [
@@ -473,7 +474,7 @@ export const konnectionsPuzzles: Question[] = [
         },
         {
           id: "g2",
-          words: ["Scream", "Impression", "Guernica", "Sunrise"],
+          words: ["Scream", "Impression, Sunrise", "Guernica", "Olympia"],
           label: "Paintings that created a storm",
         },
         {

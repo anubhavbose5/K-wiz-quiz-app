@@ -1,16 +1,13 @@
-// src/data/questionsFinalsR2.ts
-
 import type { Question } from "@/types/QuestionType";
 
 export const questionsFinalsR2: Question[] = [
   {
     id: "c1-q1",
     type: "normal",
-    questionText: "Which player has the most number of wickets in Test Cricket",
-    answer: "Muttiah Muralitharan",
-    mediaType: "image",
-    questionMediaUrl: "",
-    answerMediaUrl: "",
+    questionText:
+      "Who is the only cricketer to score six sixes in an over in an ODI World Cup match?",
+    answer: "Herschelle Gibbs (2007 vs Netherlands)",
+    mediaType: "text",
     category: "Cricket Mania",
     difficulty: "EASY",
   },
@@ -18,18 +15,21 @@ export const questionsFinalsR2: Question[] = [
     id: "c1-q2",
     type: "normal",
     questionText:
-      "Who is the only cricketer to score six sixes in an over in an ODI World Cup match?",
-    answer: "Herschelle Gibbs (2007 vs Netherlands)",
-    mediaType: "text",
+      "What is the lowest score ever defended during an ODI world cup final?",
+    answer: "183 by India, 1983 vs West Indies (140 all out)",
+    mediaType: "image",
+    questionMediaUrl: "",
+    answerMediaUrl: "",
     category: "Cricket Mania",
     difficulty: "MEDIUM",
   },
+
   {
     id: "c1-q3",
     type: "normal",
     questionText:
-      "Why was Sachin Tendulkar's 143-run “Desert Storm” innings against Australia in Sharjah (1998) considered significant despite India losing the match?",
-    answer: "Because his innings helped India reach the finals.",
+      "How many centimeters above the playing surface does a standard wicket rise?",
+    answer: "71 cm (28 inches)",
     mediaType: "text",
     category: "Cricket Mania",
     difficulty: "HARD",
@@ -494,6 +494,7 @@ export const questionsFinalsR2: Question[] = [
 
 export const finalsQuestionsRound3: Question[] = [
   {
+    isAudience: true,
     id: "q1",
     questionText: "",
     answer: "",
@@ -557,12 +558,13 @@ export const finalsQuestionsRound3: Question[] = [
     answerMediaType: "image",
   },
   {
-    id: "q-audience",
+    isAudience: true,
+    id: "q15",
     questionText: "",
     answer: "",
     mediaType: "image",
-    questionMediaUrl: "/CDQ-Audience.png",
-    answerMediaUrl: "/CDA-Audience.png",
+    questionMediaUrl: "/CDQ15.png",
+    answerMediaUrl: "/CDA15.png",
     answerMediaType: "image",
   },
   {
@@ -611,15 +613,6 @@ export const finalsQuestionsRound3: Question[] = [
     answerMediaType: "image",
   },
   {
-    id: "q13",
-    questionText: "",
-    answer: "",
-    mediaType: "image",
-    questionMediaUrl: "/CDQ13.png",
-    answerMediaUrl: "/CDA13.png",
-    answerMediaType: "image",
-  },
-  {
     id: "q14",
     questionText: "",
     answer: "",
@@ -628,28 +621,21 @@ export const finalsQuestionsRound3: Question[] = [
     answerMediaUrl: "/CDA14.png",
     answerMediaType: "image",
   },
+  {
+    isAudience: true,
+    id: "q-audience",
+    questionText: "",
+    answer: "",
+    mediaType: "image",
+    questionMediaUrl: "/CDQ-Audience.png",
+    answerMediaUrl: "/CDA-Audience.png",
+    answerMediaType: "image",
+  },
 ];
 
 export const finalsQuestionsRound1: Question[] = [
   {
-    id: "q1",
-    questionText: "Name the magnified object",
-    answer: "Wimbledon Men's Singles Trophy",
-    mediaType: "image",
-    questionMediaUrl: "/FR1Q1.jpg",
-    answerMediaUrl: "/FR1A1.png",
-    answerMediaType: "image",
-    bonusQuestion: {
-      id: "b1",
-      questionText: "Who won the 2002 Men's singles championship at Wimbledon?",
-      questionMediaUrl: "",
-      answer: "Lleyton Hewitt",
-      answerMediaType: "image",
-      answerMediaUrl: "/FR1Q1BA.jpg",
-      mediaType: "image",
-    },
-  },
-  {
+    isAudience: true,
     id: "q2",
     questionText: "Name the Person",
     answer: "Nawazuddin Siddiqui",
@@ -665,6 +651,24 @@ export const finalsQuestionsRound1: Question[] = [
       answer: "McMafia",
       answerMediaType: "image",
       answerMediaUrl: "/FR1Q2BA.jpg",
+      mediaType: "image",
+    },
+  },
+  {
+    id: "q1",
+    questionText: "Name the magnified object",
+    answer: "Wimbledon Men's Singles Trophy",
+    mediaType: "image",
+    questionMediaUrl: "/FR1Q1.jpg",
+    answerMediaUrl: "/FR1A1.png",
+    answerMediaType: "image",
+    bonusQuestion: {
+      id: "b1",
+      questionText: "Who won the 2002 Men's singles championship at Wimbledon?",
+      questionMediaUrl: "",
+      answer: "Lleyton Hewitt",
+      answerMediaType: "image",
+      answerMediaUrl: "/FR1Q1BA.jpg",
       mediaType: "image",
     },
   },
@@ -704,24 +708,7 @@ export const finalsQuestionsRound1: Question[] = [
       mediaType: "image",
     },
   },
-  {
-    id: "q5",
-    questionText: "Name the magnified edible substance",
-    answer: "Strawberry",
-    mediaType: "image",
-    questionMediaUrl: "/FR1Q5.png",
-    answerMediaUrl: "/FR1A5.jpg",
-    answerMediaType: "image",
-    bonusQuestion: {
-      id: "b5",
-      questionText: "Who is the artist of this song?",
-      mediaType: "audio",
-      questionMediaUrl: "/FR1Q5BQ.mov",
-      answer: "Harry Styles - Watermelon Sugar",
-      answerMediaType: "image",
-      answerMediaUrl: "/FR1Q5BA.png",
-    },
-  },
+
   {
     id: "q6",
     questionText: "Identify the company",
@@ -759,6 +746,7 @@ export const finalsQuestionsRound1: Question[] = [
       answerMediaUrl: "/FR1Q7BA.png",
     },
   },
+
   {
     id: "q8",
     questionText: "Identify this masterpiece",
@@ -776,6 +764,25 @@ export const finalsQuestionsRound1: Question[] = [
         "The Last Judgement - Covering the whole altar of the Sistine Chapel",
       answerMediaType: "image",
       answerMediaUrl: "/FR1Q8BA.jpg",
+    },
+  },
+  {
+    isAudience: true,
+    id: "q5",
+    questionText: "Name the magnified edible substance",
+    answer: "Strawberry",
+    mediaType: "image",
+    questionMediaUrl: "/FR1Q5.png",
+    answerMediaUrl: "/FR1A5.jpg",
+    answerMediaType: "image",
+    bonusQuestion: {
+      id: "b5",
+      questionText: "Who is the artist of this song?",
+      mediaType: "audio",
+      questionMediaUrl: "/FR1Q5BQ.mov",
+      answer: "Harry Styles - Watermelon Sugar",
+      answerMediaType: "image",
+      answerMediaUrl: "/FR1Q5BA.png",
     },
   },
   {
@@ -798,6 +805,29 @@ export const finalsQuestionsRound1: Question[] = [
       answerMediaUrl: "/FR1Q9BA.png",
     },
   },
+
+  {
+    id: "q11",
+    questionText: "Identify this organism",
+    answer: "Mushroom",
+    mediaType: "image",
+    questionMediaUrl: "/FR1Q11.jpg",
+    answerMediaUrl: "/FR1A11.jpg",
+    answerMediaType: "image",
+    bonusQuestion: {
+      id: "b11",
+      questionText:
+        "Often called the “diamond of the kitchen,” which highly prized edible fungus is predominantly found underground in symbiosis with oak trees in southern Europe?",
+      mediaType: "image",
+      questionMediaUrl: "",
+      answer: "Black Truffle",
+      answerMediaType: "image",
+      answerMediaUrl: "/FR1Q11BA.png",
+    },
+  },
+];
+
+export const tieBreakerQuestions: Question[] = [
   {
     id: "q10",
     questionText: "Identify the press nickname of this person",
@@ -818,22 +848,12 @@ export const finalsQuestionsRound1: Question[] = [
     },
   },
   {
-    id: "q11",
-    questionText: "Identify this organism",
-    answer: "Mushroom",
+    id: "q13",
+    questionText: "",
+    answer: "",
     mediaType: "image",
-    questionMediaUrl: "/FR1Q11.jpg",
-    answerMediaUrl: "/FR1A11.jpg",
+    questionMediaUrl: "/CDQ13.png",
+    answerMediaUrl: "/CDA13.png",
     answerMediaType: "image",
-    bonusQuestion: {
-      id: "b11",
-      questionText:
-        "Often called the “diamond of the kitchen,” which highly prized edible fungus is predominantly found underground in symbiosis with oak trees in southern Europe?",
-      mediaType: "image",
-      questionMediaUrl: "",
-      answer: "Black Truffle",
-      answerMediaType: "image",
-      answerMediaUrl: "/FR1Q11BA.png",
-    },
   },
 ];

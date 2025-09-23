@@ -41,6 +41,37 @@ export const prelims1Round1: Question[] = [
 
 export const prelims1Round3: Question[] = [
   {
+    isAudience: true,
+    id: "q8",
+    questionText: "Name this bird",
+    answer: "Mockingbird",
+    mediaType: "image",
+    questionMediaUrl: "",
+    answerMediaUrl: "/CluesA8.jpg",
+    answerMediaType: "image",
+    type: "clue",
+    clues: [
+      {
+        id: "c3",
+        mediaType: "image",
+        mediaUrl: "/CluesQ8C3.jpg",
+        questionText: "",
+      },
+      {
+        id: "c2",
+        mediaType: "text",
+        mediaUrl: "",
+        questionText: `X are a group of New World passerine birds from the family Mimidae.`,
+      },
+      {
+        id: "c1",
+        mediaType: "audio",
+        mediaUrl: "/CluesQ8C1.mov",
+        questionText: ``,
+      },
+    ],
+  },
+  {
     id: "q1",
     questionText: "",
     answer: "Labubu - Blind box packaging",
@@ -104,10 +135,10 @@ export const prelims1Round3: Question[] = [
   {
     id: "q3",
     questionText: "",
-    answer: "Patek Phillipe",
+    answer: "Patek Philippe",
     mediaType: "image",
     questionMediaUrl: "",
-    answerMediaUrl: "",
+    answerMediaUrl: "/CluesA3.png",
     answerMediaType: "image",
     type: "clue",
     clues: [
@@ -248,36 +279,6 @@ export const prelims1Round3: Question[] = [
         id: "c3",
         mediaType: "audio",
         mediaUrl: "/CluesQ7C3.mp3",
-        questionText: "",
-      },
-    ],
-  },
-  {
-    id: "q8",
-    questionText: "Name this song.",
-    answer: "Mockingbird",
-    mediaType: "image",
-    questionMediaUrl: "",
-    answerMediaUrl: "/CluesA8.jpg",
-    answerMediaType: "image",
-    type: "clue",
-    clues: [
-      {
-        id: "c1",
-        mediaType: "audio",
-        mediaUrl: "/CluesQ8C1.mov",
-        questionText: ``,
-      },
-      {
-        id: "c2",
-        mediaType: "text",
-        mediaUrl: "",
-        questionText: `X are a group of New World passerine birds from the family Mimidae.`,
-      },
-      {
-        id: "c3",
-        mediaType: "image",
-        mediaUrl: "/CluesQ8C3.jpg",
         questionText: "",
       },
     ],

@@ -64,6 +64,11 @@ export default function QuestionManager({
 
   return (
     <div className="space-y-6 w-full max-w-4xl mx-auto">
+      {current?.isAudience && (
+        <p className="text-5xl font-semibold text-lime-500">
+          #Audience Question
+        </p>
+      )}
       {/* Normal vs Clue rendering */}
       {current.type === "clue" ? (
         <div className="space-y-4">

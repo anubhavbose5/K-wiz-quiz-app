@@ -24,6 +24,7 @@ export interface NormalQuestion {
   category?: string;
   difficulty?: "EASY" | "MEDIUM" | "HARD";
   bonusQuestion?: BonusQuestion;
+  isAudience?: boolean;
 }
 
 /** Clue round pieces */
@@ -50,6 +51,7 @@ export interface ClueQuestion {
   points?: number;
   category?: string;
   difficulty?: "EASY" | "MEDIUM" | "HARD";
+  isAudience?: boolean;
 }
 
 /** K-onnections puzzle schema */
@@ -82,6 +84,7 @@ export interface KonnectionsQuestion {
   questionMediaUrl?: string;
   answerMediaUrl?: string;
   answerMediaType?: MediaType;
+  isAudience?: boolean;
 }
 
 /** Union of all questions */
