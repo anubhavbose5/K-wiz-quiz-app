@@ -86,7 +86,7 @@ export const prelims1Round3: Question[] = [
         mediaType: "text",
         mediaUrl: "",
         questionText:
-          "In July 2025, authorities in Iraq’s Kurdistan region announced they had banned the sale of X due to claims they resulted in behavioral problems in children. What is X?",
+          "In July 2025, authorities in Iraq's Kurdistan region announced they had banned the sale of X due to claims they resulted in behavioral problems in children. What is X?",
       },
       {
         id: "c2",
@@ -648,6 +648,54 @@ export const konnectionsPuzzles: Question[] = [
           id: "g4",
           words: ["Expelliarmus", "Lumos", "Alohomora", "Accio"],
           label: "Harry Potter spells",
+        },
+      ],
+    },
+  },
+  {
+    id: "q-k-8",
+    type: "konnections",
+    title: "K-onnections Puzzle 1",
+    konnectionsPuzzle: {
+      id: "k1",
+      words: [
+        "Cheetah",
+        "Purosangue",
+        "Jaguar",
+        "Bond",
+        "Rangefinder",
+        "M",
+        "SLR",
+        "Portofino",
+        "Lynx",
+        "Monza",
+        "Leopard",
+        "Q",
+        "Point and Shoot",
+        "Moneypenny",
+        "Mirrorless",
+        "Roma",
+      ],
+      groups: [
+        {
+          id: "g1",
+          words: ["M", "Q", "Moneypenny", "Bond"],
+          label: "James Bond characters",
+        },
+        {
+          id: "g2",
+          words: ["Roma", "Portofino", "Monza", "Purosangue"],
+          label: "Ferrari Cars",
+        },
+        {
+          id: "g3",
+          words: ["Leopard", "Jaguar", "Cheetah", "Lynx"],
+          label: "Wild Cats",
+        },
+        {
+          id: "g4",
+          words: ["SLR", "Mirrorless", "Rangefinder", "Point and Shoot"],
+          label: "Camera Technologies",
         },
       ],
     },

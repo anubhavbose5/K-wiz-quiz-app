@@ -558,4 +558,52 @@ export const konnectionsPuzzles: Question[] = [
       ],
     },
   },
+  {
+    id: "q-k-7",
+    type: "konnections",
+    title: "K-onnections Puzzle 1",
+    konnectionsPuzzle: {
+      id: "k1",
+      words: [
+        "Green",
+        "Love",
+        "Black",
+        "Deuce",
+        "Cover",
+        "Curtain",
+        "Straight",
+        "Encore",
+        "Oolong",
+        "Advantage",
+        "White",
+        "Break",
+        "Switch",
+        "Set",
+        "Ramp",
+        "Playbill",
+      ],
+      groups: [
+        {
+          id: "g1",
+          words: ["Green", "Black", "Oolong", "White"],
+          label: "Types of tea",
+        },
+        {
+          id: "g2",
+          words: ["Love", "Deuce", "Advantage", "Break"],
+          label: "Tennis Score related terms",
+        },
+        {
+          id: "g3",
+          words: ["Cover", "Straight", "Switch", "Ramp"],
+          label: "Batting Shots related terms",
+        },
+        {
+          id: "g4",
+          words: ["Curtain", "Encore", "Set", "Playbill"],
+          label: "Theatre related",
+        },
+      ],
+    },
+  },
 ];
