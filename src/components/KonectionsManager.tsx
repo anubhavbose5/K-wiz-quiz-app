@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useRef } from "react";
 import KonnectionsGrid from "./KonectionsGrid";
 import { cn } from "@/lib/utils";
 import { ResultModal } from "./ResultModal";
-
+import CountdownTimer from "./CountDownTImer";
 /**
  * Types
  */
@@ -48,6 +48,7 @@ export default function KonnectionsManager({
   // internal "started" state (mirrors prop when controlled)
   const isControlled = typeof started === "boolean";
   const [internalStarted, setInternalStarted] = useState<boolean>(!!started);
+  const [showTimer, setShowTimer] = useState(false);
 
   // puzzle-specific internal state
   const [triesLeft, setTriesLeft] = useState<number>(maxTries);
@@ -61,9 +62,17 @@ export default function KonnectionsManager({
   const [modalOpen, setModalOpen] = useState(false);
   const [modalType, setModalType] = useState<"correct" | "wrong" | null>(null);
 
-  const correctSound = useMemo(() => new Audio("/CorrectAnswer.mp3"), []);
-  const wrongSound = useMemo(() => new Audio("/WrongAnswer.mp3"), []);
+  // const correctSound = useMemo(() => new Audio("/CorrectAnswer.mp3"), []);
+  // const wrongSound = useMemo(() => new Audio("/WrongAnswer.mp3"), []);
+  const correctSoundRef = useRef<HTMLAudioElement | null>(null);
+  const wrongSoundRef = useRef<HTMLAudioElement | null>(null);
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      correctSoundRef.current = new Audio("/CorrectAnswer.mp3");
+      wrongSoundRef.current = new Audio("/WrongAnswer.mp3");
+    }
+  }, []);
   // Reset internal state whenever puzzle changes (new question)
   useEffect(() => {
     setInternalStarted(!!started); // reflect controlled start if provided
@@ -186,7 +195,7 @@ export default function KonnectionsManager({
 
     const matched = findMatchedGroup();
     if (matched) {
-      correctSound.play().catch(() => {});
+      correctSoundRef.current?.play().catch(() => {});
       setModalType("correct");
       setModalOpen(true);
 
@@ -203,7 +212,7 @@ export default function KonnectionsManager({
         onAllGroupsFound?.();
       }
     } else {
-      wrongSound.play().catch(() => {});
+      wrongSoundRef.current?.play().catch(() => {});
       setModalType("wrong");
       setModalOpen(true);
 
@@ -278,6 +287,18 @@ export default function KonnectionsManager({
   // Started: main puzzle UI
   return (
     <div className="w-full max-w-4xl mx-auto space-y-6">
+      {showTimer && (
+        <div className="fixed top-[15%] right-4 z-50">
+          <CountdownTimer
+            totalSeconds={60}
+            size={120}
+            onComplete={() => {
+              setMessage("Time’s up! Revealing all answers.");
+              setFoundGroupIds(new Set(puzzle.groups.map((g) => g.id)));
+            }}
+          />
+        </div>
+      )}
       <div className="flex items-center justify-between gap-4">
         <div className="flex gap-3">
           <button
@@ -291,6 +312,12 @@ export default function KonnectionsManager({
             className="px-4 py-2 rounded-xl bg-white/10 text-white hover:bg-white/20 ai-glow"
           >
             Reset Puzzle
+          </button>
+          <button
+            onClick={() => setShowTimer(true)}
+            className="px-4 py-2 rounded-xl bg-green-600 text-white hover:bg-green-500 ai-glow"
+          >
+            Start Timer
           </button>
         </div>
 
