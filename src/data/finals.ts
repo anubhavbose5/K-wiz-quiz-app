@@ -73,6 +73,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "American Sitcoms",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC3A1.jpg",
   },
   {
     id: "c3-q2",
@@ -83,6 +85,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "American Sitcoms",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC3A2.jpg",
   },
   {
     id: "c3-q3",
@@ -93,6 +97,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "American Sitcoms",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC3A3.jpeg",
   },
   {
     id: "c4-q1",
@@ -104,6 +110,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "UPSC Aspirant",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC4A1.webp",
   },
   {
     id: "c4-q2",
@@ -114,6 +122,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "UPSC Aspirant",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC4A2.png",
   },
   {
     id: "c4-q3",
@@ -124,6 +134,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "UPSC Aspirant",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC4A3.png",
   },
   {
     id: "c5-q1",
@@ -194,6 +206,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Aami Bangali",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC7A1.webp",
   },
   {
     id: "c7-q2",
@@ -204,9 +218,11 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Aami Bangali",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC7A2.jpg",
   },
   {
-    id: "c7-q2",
+    id: "c7-q3",
     type: "normal",
     questionText:
       "During Durga Puja, what is the name of the ritual performed on Shasthi that invokes Goddess Durga into the idol, marking the official start of the celebrations and symbolizing the awakening of divine power to defeat evil?",
@@ -214,6 +230,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Aami Bangali",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC7A3.webp",
   },
   {
     id: "c8-q1",
@@ -264,6 +282,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Rational Consumer",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC9A2.png",
   },
   {
     id: "c9-q3",
@@ -274,6 +294,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Rational Consumer",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC9A3.png",
   },
   {
     id: "c10-q1",
@@ -284,6 +306,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Incredible India",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC10A1.jpg",
   },
   {
     id: "c10-q2",
@@ -294,6 +318,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Incredible India",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC10A2.jpg",
   },
   {
     id: "c10-q3",
@@ -304,6 +330,8 @@ export const questionsFinalsR2: Question[] = [
     questionMediaUrl: "/SpinC10Q3.png",
     category: "Incredible India",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC10A3.jpeg",
   },
   {
     id: "c11-q1",
@@ -436,6 +464,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Words and Wonders",
     difficulty: "EASY",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC15A1.jpg",
   },
   {
     id: "c15-q2",
@@ -446,6 +476,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Words and Wonders",
     difficulty: "MEDIUM",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC15A2.jpg",
   },
   {
     id: "c15-q3",
@@ -456,6 +488,8 @@ export const questionsFinalsR2: Question[] = [
     mediaType: "text",
     category: "Words and Wonders",
     difficulty: "HARD",
+    answerMediaType: "image",
+    answerMediaUrl: "/SpinC15A3.jpg",
   },
   {
     id: "c16-q1",
@@ -840,7 +874,7 @@ export const finalsQuestionsRound1: Question[] = [
         "Often called the “diamond of the kitchen,” which highly prized edible fungus is predominantly found underground in symbiosis with oak trees in southern Europe?",
       mediaType: "image",
       questionMediaUrl: "",
-      answer: "Black Truffle",
+      answer: "Truffle",
       answerMediaType: "image",
       answerMediaUrl: "/FR1Q11BA.png",
     },

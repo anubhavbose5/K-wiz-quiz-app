@@ -115,14 +115,14 @@ export default function QuestionManager({
               >
                 Start Puzzle
               </button>
-              <button
+              {/* <button
                 onClick={() => {
                   // optional skip behavior: goNext()
                 }}
                 className="px-4 py-3 rounded-xl bg-white/10"
               >
                 Skip Puzzle
-              </button>
+              </button> */}
             </div>
           ) : null}
 
