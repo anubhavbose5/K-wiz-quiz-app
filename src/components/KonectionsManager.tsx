@@ -294,7 +294,7 @@ export default function KonnectionsManager({
             size={120}
             onComplete={() => {
               setMessage("Time’s up! Revealing all answers.");
-              setFoundGroupIds(new Set(puzzle.groups.map((g) => g.id)));
+              // setFoundGroupIds(new Set(puzzle.groups.map((g) => g.id)));
             }}
           />
         </div>
